@@ -1,0 +1,229 @@
+/* Popup container */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+label{float: left; display: block; text-align: right; width: 120px; padding-right: 1em;}
+input, textarea{display: block; margin-bottom: 20px;}
+#submit{margin-left: 130px}
+table{border: 2px solid #3399CC; border-collapse: collapse;}
+td, th{padding: 0.5em; border: 2px solid #3399CC;}
+td{text-align: center;}
+tr:nth-of-type(2){background-color: #F5FAFC}
+tr:nth-of-type(4){background-color: #F5FAFC}
+tr:nth-of-type(6){background-color: #F5FAFC}
+.text{text-align: left}
+* { box-sizing: border-box; }
+header, main, nav, footer, section, article, figure, figcaption, aside { display: block; }
+body { font-family: Verdana, Arial, sans-serif;
+       background-color: #005073;
+}
+#wrapper { background-color: #D3D3D3;
+           color: #000066;
+           width: 80%;
+		   margin: auto;
+           min-width:940px;
+}
+header { background-color: #71c7ec;
+        color: #00005D;
+        font-size: 150%;
+        padding: 10px 10px 10px 155px;
+		background-image: url(iclogofinal.jpg);
+		background-repeat: no-repeat;
+		height: 130px;
+
+}
+header h1 { margin-bottom: 0; }
+
+header span { font-size: .80em;
+              font-style: italic;
+			  color: #00005D;
+			  padding-left: 15em;
+}
+header a{text-decoration:none;
+color:white;}
+.textRight{text-align: right;}
+.left{margin-left: 0}
+.textFloat{float: right}
+.center{display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;}
+
+aside { float: right;
+        width: 15em;
+		background-color: #eaeaea;
+		padding: 1em;
+		font-size: 80%;
+		box-shadow: 5px 5px 5px #333333;
+		position: relative;
+		top: -20px;
+}
+
+
+nav { float: left;
+	   width: 150px;
+	   letter-spacing:0.1em;
+	   font-weight: bold;
+}
+nav ul { list-style-type: none;
+         margin: 0;
+         padding: 0;
+}
+nav a { text-decoration: none;
+        display: block;
+	    padding: 20px;
+        background-color: #D3D3D3;
+	    border-bottom: 1px solid #ffffff;
+}
+nav a:link { color: #33658A;; }
+nav a:visited { color: #33658A;; }
+nav a:hover { background-color: #eaeaea;
+              color: #869dc7;}
+main { background-color: #ffffff;
+           color: #000000;
+		   padding: 10px 20px;
+	       overflow: auto;
+		   display: block;
+}
+h2 { color: #33658A;
+     font-family: arial, sans-serif;
+     margin: 5px;
+     text-align: center;
+}
+#nav2{text-align: center; }
+#nav2 li{display: inline; padding-right: 15px; font-weight: bold;}
+#nav2 a{text-decoration: none;}
+#nav2 a:link { color: #33658A;}
+#nav2 a:visited { color: #33658A;}
+#nav2 a:hover {color: #869dc7;}
+
+h3{color: #71c7ec}
+.boardFigure{float: left;
+  width: 260px;
+  margin: 10px;
+}
+figure {float: none;
+         width: 260px;
+		 margin: 10px;
+}
+figcaption { text-align: center;
+		   font-size: .8em;
+		   font-style: italic;
+}
+footer {font-size:80%;
+         text-align: center;
+         padding: 10px;
+         background-color: #71c7ec;
+         color: #33658A;
+		 clear: both;
+}
+@media only screen and (max-width: 64em) {
+	body { margin: 0;
+	      background-color: #FFFFFF; }
+	#wrapper { min-width: 0;
+	           width: auto;
+			   box-shadow: none;
+			   border: none; }
+   header { padding-top: 0.5em;
+          padding-bottom: 0.5em;
+		  padding-left: 0;
+          height: auto;	}
+	h1 { letter-spacing: 0.1em; }
+	main { margin-left: 0; }
+	nav { float: none;
+	     width: 100%;
+text-align:center;}
+nav a { padding: 0.5em;
+border-bottom: none;}
+	nav li {display: inline-block;
+	      padding: 0.25em 0.75em;
+
+ }
+	footer { margin-left: 0}
+}
+@media only screen and (max-width: 37.5em) {
+	main { padding: 0.1em 1em;
+		   font-size: 90%; }
+	h1 { font-size: 2em;}
+   	nav { padding: 0;
+ }
+	nav li { display: block; margin: 0; border: solid 2px #330000; }
+	nav a { display: block; }
+	aside{display:none;}
+	#mobile { display: inline; }
+	#desktop { display: none; }
+}
+.container {
+  display: flex;
+}
+
+.item:hover{
+  background-color: #61bae7;
+  color: white;
+  height: 300px;
+  width: 300px;
+}
+
+.item {
+  flex-grow: 1;
+  height: 250px;
+  width: 200px;
+  background-color: #F5FAFC;
+  text-align: center;
+}
+
+.item + .item {
+  margin-left: 2%;
+}
+
+.social_icons{
+  icon-4x;
+}
